@@ -1,0 +1,299 @@
+html, body 
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: dimgray;
+    background-image: url("https://i.imgur.com/NDWbyOW.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-attachment: fixed;
+    background-size: 125%;        
+}
+
+#anim-container
+{
+    width: 3600px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#siluetteContainer
+{
+    position: absolute;
+    bottom: 0;
+    width: 500px;
+}
+
+#siluette
+{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: .5s ease;
+    backface-visibility: hidden;
+}
+
+#middleText
+{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#siluetteContainer:hover #siluette
+{
+    opacity: 0.3;
+}
+
+#siluetteContainer:hover #middleText
+{
+    opacity: 1;
+}
+
+#displayText
+{
+    color: white;
+    font-size: 64px;
+    padding: 5px 30px;
+}
+
+#logo
+{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 50px;
+}
+
+#jessie-sentence-1, #james-sentence-1
+{
+    position: absolute;
+    bottom: 250px;
+    width: 600px;
+    height: 200px;
+}
+
+#jessie1, #james1
+{
+    position: absolute;
+    bottom: -250px;
+    width: 175px;
+}
+
+#jessie-sentence-1
+{
+    left: 600px;
+    text-shadow: 1px 1px 1px red;
+    z-index: 1;
+}
+
+#james-sentence-1
+{
+    left: 800px;
+    text-shadow: 1px 1px 1px red;
+    z-index: 2;
+}
+
+#jessie-sentence-2, #jessie-sentence-3, #jessie-sentence-4, #james-sentence-2, #james-sentence-3
+{
+    position: absolute;
+    text-shadow: 1px 1px 1px red;
+    bottom: 150px;
+    width: 600px;
+    height: 200px;
+}
+
+#james-sentence-4
+{
+    position: absolute;
+    text-shadow: 1px 1px 1px red;
+    bottom: 170px;
+    width: 600px;
+    height: 200px;
+}
+
+#jessie2, #jessie3, #jessie4, #james2, #james3
+{
+    width: 175px;
+}
+
+#james4
+{
+    width: 145px;
+}
+
+#jessie-sentence-2
+{
+    left: 1200px;
+    z-index: 3;
+}
+
+#jessie-sentence-3
+{
+    left: 1600px;
+    z-index: 5;
+}
+
+#jessie-sentence-4
+{
+    left: 2700px;
+    z-index: 7;
+}
+
+#james-sentence-2
+{
+    left: 1295px;
+    z-index: 4;
+}
+
+#james-sentence-3
+{
+    left: 1700px;
+    z-index: 6;
+}
+
+#james-sentence-4
+{
+    left: 2840px;
+    z-index: 8;
+}
+
+#jessen1, #jamsen1, #jessen2, #jamsen2, #jessen3, #jamsen3, #jessen4, #jamsen4
+{
+    position: absolute;
+    background-color: rgb(125, 125, 125);
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 125px;
+    display: none;
+}
+
+#jessen1
+{
+    left: 80;
+    top: 40px;
+}
+
+#jessen2, #jessen3, #jessen4
+{
+    left: -250px;
+    top: 175px;
+}
+
+#jamsen1
+{
+    left: -50px;
+    top: 40px;
+}
+
+#jamsen2, #jamsen3, #jamsen4
+{
+    left: -100px;
+    top: -110px;
+}
+
+#jessiejamesgif
+{
+    position: absolute;
+    bottom: 100px;
+    left: 2000px;
+}
+
+#jessiejames
+{
+    padding: 1,5rem;
+    border-radius: 200px;
+}
+
+#jessiename, #jamesname
+{
+    position: absolute;
+    background-color: rgb(125, 125, 125);
+    text-shadow: 1px 1px 1px red;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 125px;    
+}
+
+#jessiename
+{
+    bottom: 230px;
+    left: 175px;
+}
+
+#jamesname
+{
+    bottom: -100px;
+    left: 175px;
+}
+
+#meowthgif
+{
+    position: absolute;
+    bottom: 150px;
+    left: 3200px;
+}
+
+#meowth
+{
+    padding: 1,5rem;
+    border-radius: 200px;
+}
+
+#meowth-sentence
+{
+    position: absolute;
+    text-shadow: 1px 1px 1px red;
+    background-color: rgb(125, 125, 125);
+    width: 320px;
+    left: -40px;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 150px;
+}
+
+#jessie1:hover ~ #jessen1, #jessie2:hover ~ #jessen2, #jessie3:hover ~ #jessen3, #jessie4:hover ~ #jessen4, 
+#james1:hover ~ #jamsen1, #james2:hover ~ #jamsen2, #james3:hover ~ #jamsen3, #james4:hover ~ #jamsen4
+{
+    display: block;
+}
+
+#pkmnAnimation
+{
+    top: 0;
+}
+
+#pkmn
+{
+    position: relative;
+    margin: auto;
+    z-index: 100;
+    width: 150px;
+    height: 100px;
+    -webkit-animation: pkmnMove 20s infinite;
+    animation: pkmnMove 20s infinite;
+}
+
+#pkmn {-webkit-animation-timing-function: linear;}
+#pkmn {animation-timing-function: linear;}
+
+@-webkit-keyframes pkmnMove 
+{
+    100% {-webkit-transform: rotate(1080deg);}
+    from {left: 0px;}
+    to {left: 3600px;}
+}
+
+@keyframes pkmMove 
+{
+    100% {transform: rotate(1080deg);}
+    from {left: 0px;}
+    to {left: 3600px;}
+}
