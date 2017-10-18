@@ -8,7 +8,39 @@ html, body
     background-repeat: no-repeat;
     background-position: left bottom;
     background-attachment: fixed;
-    background-size: 125%;        
+    background-size: 125%;     
+}
+
+#audioPosition
+{
+    display: block;
+    position: fixed;
+}
+
+#audioContainer
+{
+    position: relative;
+    width: 180px;
+    height: 40px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#audio
+{
+    position: fixed; 
+    top: -262px;
+    right: 0px;
+    overflow: hidden;
+}
+
+#playAudio
+{
+    white-space: nowrap;
+    width: 30px;
+    height: 20px;
+    text-shadow: 1px 1px 1px red;
+    font-size: .7rem;
 }
 
 #anim-container
@@ -31,7 +63,6 @@ html, body
     display: block;
     width: 100%;
     height: auto;
-    transform: .5s ease;
     backface-visibility: hidden;
 }
 
@@ -165,12 +196,10 @@ html, body
     z-index: 8;
 }
 
+
 #jessen1, #jamsen1, #jessen2, #jamsen2, #jessen3, #jamsen3, #jessen4, #jamsen4
 {
     position: absolute;
-    background-color: rgb(125, 125, 125);
-    padding: 1rem;
-    font-size: 2rem;
     border-radius: 125px;
     display: none;
 }
@@ -215,10 +244,7 @@ html, body
 #jessiename, #jamesname
 {
     position: absolute;
-    background-color: rgb(125, 125, 125);
     text-shadow: 1px 1px 1px red;
-    padding: 1rem;
-    font-size: 2rem;
     border-radius: 125px;    
 }
 
@@ -251,12 +277,20 @@ html, body
 {
     position: absolute;
     text-shadow: 1px 1px 1px red;
-    background-color: rgb(125, 125, 125);
     width: 320px;
     left: -40px;
+    border-radius: 150px;
+}
+
+#jessen1, #jamsen1, #jessen2, #jamsen2, #jessen3, #jamsen3, #jessen4, #jamsen4, #jessiename, #jamesname, #meowth-sentence
+{
+    background-image: url("http://i.imgur.com/LIUBPxK.jpg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-attachment: fixed;
+    background-size: 125%;    
     padding: 1rem;
     font-size: 2rem;
-    border-radius: 150px;
 }
 
 #jessie1:hover ~ #jessen1, #jessie2:hover ~ #jessen2, #jessie3:hover ~ #jessen3, #jessie4:hover ~ #jessen4, 
@@ -277,23 +311,20 @@ html, body
     z-index: 100;
     width: 150px;
     height: 100px;
-    -webkit-animation: pkmnMove 20s infinite;
-    animation: pkmnMove 20s infinite;
-}
-
-#pkmn {-webkit-animation-timing-function: linear;}
-#pkmn {animation-timing-function: linear;}
+    -webkit-animation: pkmnMove 20s infinite linear;
+    animation: pkmnMove 20s infinite linear;
+} 
 
 @-webkit-keyframes pkmnMove 
 {
-    100% {-webkit-transform: rotate(1080deg);}
+    100% {-webkit-transform: rotate(4320deg);}
     from {left: 0px;}
     to {left: 3600px;}
 }
 
 @keyframes pkmMove 
 {
-    100% {transform: rotate(1080deg);}
+    100% {transform: rotate(4320deg);}
     from {left: 0px;}
     to {left: 3600px;}
 }
